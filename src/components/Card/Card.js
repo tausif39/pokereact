@@ -1,19 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import t from '../../helpers/pokemonTypes'
 import './style.css';
 
 function Card(props) {
-    const [pokemonData, setPokemonData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    // useEffect(() => {
-    //     fetch(props.url)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setPokemonData(data);
-    //             setLoading(false);
-    //         })
-    // }, [])
-
     return (
         <div className="Card">
 
