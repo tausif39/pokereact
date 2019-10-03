@@ -13,10 +13,10 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      let data = await getAllPokemon(initialURL)
-      setNextUrl(data.next);
-      setPrevUrl(data.previous);
-      await loadPokemon(data.results);
+      let response = await getAllPokemon(initialURL)
+      setNextUrl(response.next);
+      setPrevUrl(response.previous);
+      await loadPokemon(response.results);
       setLoading(false);
     }
     fetchData();
@@ -41,22 +41,17 @@ function App() {
     setLoading(false);
   }
 
-  const _asyncForEach = async (array, callback) => {
+  const asyncForEach = async (array, callback) => {
     for (let index = 0; index < array.length; index++) {
       await callback(array[index]);
     }
   };
 
-  const _getPokemon = async (pokemon, status) => {
-    let response = await getPokemon(pokemon);
-    return response;
-  };
-
   const loadPokemon = async (data) => {
     let _pokemon = []
 
-    await _asyncForEach(data, async pokemon => {
-      let pokemonRecord = await _getPokemon(pokemon)
+    await asyncForEach(data, async pokemon => {
+      let pokemonRecord = await getPokemon(pokemon)
       _pokemon.push(pokemonRecord);
     })
     setPokemonData(_pokemon);
@@ -65,7 +60,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div>
         {loading ? <h1 style={{ textAlign: 'center' }}>Loading...</h1> : (
           <>
             <div className="btn">

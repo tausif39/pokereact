@@ -1,4 +1,4 @@
-const types = {
+const typeColors = {
     bug: '#729f3f',
     dragon: '#53a4cf',
     fairy: '#fdb9e9',
@@ -19,4 +19,4 @@ const types = {
     water: '#4592c4'
 }
 
-export default types;
+export default typeColors;
