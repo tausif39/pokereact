@@ -41,20 +41,12 @@ function App() {
     setLoading(false);
   }
 
-  const asyncForEach = async (array, callback) => {
-    for (let index = 0; index < array.length; index++) {
-      await callback(array[index]);
-    }
-  };
-
   const loadPokemon = async (data) => {
-    let _pokemon = []
-
-    await asyncForEach(data, async pokemon => {
+    let _pokemonData = await Promise.all(data.map(async pokemon => {
       let pokemonRecord = await getPokemon(pokemon)
-      _pokemon.push(pokemonRecord);
-    })
-    setPokemonData(_pokemon);
+      return pokemonRecord
+    }))
+    setPokemonData(_pokemonData);
   }
 
   return (
