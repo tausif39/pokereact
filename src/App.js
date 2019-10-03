@@ -61,7 +61,7 @@ function App() {
             </div>
             <div className="grid-container">
               {pokemonData.map((pokemon, i) => {
-                return <Card key={i} url={pokemon.url} pokemon={pokemon} />
+                return <Card key={i} pokemon={pokemon} />
               })}
             </div>
             <div className="btn">
