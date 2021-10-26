@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pokereact/static/css/main.3b3416de.chunk.css",
+    "main.js": "/pokereact/static/js/main.89ac22ea.chunk.js",
+    "main.js.map": "/pokereact/static/js/main.89ac22ea.chunk.js.map",
+    "runtime~main.js": "/pokereact/static/js/runtime~main.c703519f.js",
+    "runtime~main.js.map": "/pokereact/static/js/runtime~main.c703519f.js.map",
+    "static/js/2.f23e6dfe.chunk.js": "/pokereact/static/js/2.f23e6dfe.chunk.js",
+    "static/js/2.f23e6dfe.chunk.js.map": "/pokereact/static/js/2.f23e6dfe.chunk.js.map",
+    "index.html": "/pokereact/index.html",
+    "precache-manifest.c4026eb7d7d13be26144b8bca1913b3f.js": "/pokereact/precache-manifest.c4026eb7d7d13be26144b8bca1913b3f.js",
+    "service-worker.js": "/pokereact/service-worker.js",
+    "static/css/main.3b3416de.chunk.css.map": "/pokereact/static/css/main.3b3416de.chunk.css.map"
+  }
+}
